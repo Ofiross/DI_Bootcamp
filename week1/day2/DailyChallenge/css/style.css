@@ -1,0 +1,51 @@
+body {
+    background: url("https://urbantv.info/wp-content/uploads/2020/09/Robert-Downey-Jr-ironman-2.jpg") no-repeat center center fixed;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    margin: auto 0;
+}
+
+.nav-link{
+    
+    color: white;
+}
+
+.nav-link:hover {
+    color: grey;
+}
+
+#nav {
+    background-color: black;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+li {
+    list-style-type: none;
+}
+
+
+.mainPage{ 
+    display: grid;
+    align-content: end;
+    color: black; 
+    font-family: 'Kanit', sans-serif;
+    height: 75vh;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+footer {
+    position:absolute;
+   bottom:0;
+   width:100%;
+   height:60px;   /* Height of the footer */
+   background:black;
+}

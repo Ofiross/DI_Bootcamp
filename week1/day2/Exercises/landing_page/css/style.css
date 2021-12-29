@@ -1,0 +1,64 @@
+body {
+    margin: auto 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.signUpContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 75vh;
+    background: url("https://images.pexels.com/photos/189349/pexels-photo-189349.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
+}
+
+#emailSignUp {
+    margin-left: auto;
+    margin-right: auto;
+    width: 40rem;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 170px;
+    background: rgb(224, 224, 224)
+}
+
+.fas {
+    font-size: 90px;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+
+h2 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.iconsP {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#emailPlaceHolder {
+    width: 25rem;
+    padding: 8px 20px;
+    margin: 9px 0;
+    box-sizing: border-box;
+}
+
+#button {
+  background-color: #456edd;
+  border: none;
+  color: white;
+  padding: 8px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}

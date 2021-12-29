@@ -1,0 +1,60 @@
+body {
+    font-family: 'Fira Sans', sans-serif;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+hr {
+    border-top: 2px solid rgb(122, 122, 122);
+}
+
+th {
+    color: rgb(253, 0, 0);
+    border: 1px solid rgb(253, 0, 0);
+  }
+td {
+    border: 1px solid rgb(0, 0, 0);
+    box-shadow: 2px 2px 2px 2px grey;
+    text-align: center;
+  }
+
+#emptyRow {
+    border: none;
+}
+
+#compare {
+    font-weight: bold;
+}
+
+#mediaPhoto {
+    text-align: center;
+}
+
+#markUpText {
+    background-color: yellow;
+}
+
+#catPic {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    border: 5px solid rgb(255, 174, 0);
+}
+
+#lionPic {
+    display: block;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    border: 5px solid rgb(255, 174, 0);
+}
+
+#lionLink {
+    font-weight: bolder;
+    text-decoration: none;
+    font-family: 'Pushster', cursive;
+}
