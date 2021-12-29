@@ -1,0 +1,105 @@
+body {
+  margin: 20px 40px 20px 40px;
+  border: 5px solid rgb(100, 100, 100);
+  box-shadow: 8px 8px 50px 8px;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+header {
+  height: 220px;
+  border-bottom:  5px solid rgb(100, 100, 100);
+  box-shadow: 2px 2px 10px 1px; rgb(194, 194, 194);
+  border-radius: 5px;
+}
+
+h1, h2, h3, h4 {
+  text-transform: uppercase;
+}
+
+h1 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: Bold 700;
+  font-size: 2.4rem;
+}
+
+h4 {
+  font-size: .8rem;
+}
+
+#intro {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 200;
+}
+
+#profilePicture {
+  position: relative;
+  left: 88%;
+  bottom: 200px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+}
+
+#contacts {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+}
+
+#profile {
+  position: relative;
+  width: 700px;
+  left: 45%;
+  top: -220px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+}
+
+
+#educationHeader {
+  position: relative;
+  bottom: 80px;
+  left: 700px;
+}
+
+#education {
+  position: relative;
+  top: -90px;
+  right: 100px; 
+  display: flex;
+  align-content: center;
+  gap: 200px;
+  flex-shrink: 1;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+
+}
+
+
+#work {
+  position: relative;
+  right: 100px;
+  height: 300px;
+  display: flex;
+  align-content: center;
+  gap: 200px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+}
+
+#workHeader {
+  position: relative;
+  bottom: 80px;
+  left: 680px;
+
+}
+
+#linkedinLink {
+  text-decoration: none;
+  color: black;
+}
+
+.fas, .fab {
+  color: black;
+}
