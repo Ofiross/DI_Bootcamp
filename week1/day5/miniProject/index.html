@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ruda&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h1>Shopping Online</h1>
+            <div id="Icon">
+                <img id="logo" src="img/logo.png" alt="icon">
+            </div>
+            <div id="logIn">
+                <button id="logInButton" onclick="document.getElementById('id01').style.display='block'"
+                    style="width:auto;">Login</button>
+
+                <a href="logIn/logIn.html" target="_blank">Sign Up</a>
+
+            </div>
+        </nav>
+    </header>
+
+    <div id="loginForm">
+        <div id="id01" class="modal">
+            <form class="modal-content animate" action="/action_page.php" method="post">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                        title="Close Modal">&times;</span>
+                    <img src="img/logo.png" alt="Avatar" class="avatar">
+                </div>
+
+                <div class="container">
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" placeholder="Username" name="uname" required>
+
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Password" name="psw" required>
+
+                    <button type="submit">Login</button>
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember"> Remember me
+                    </label>
+                </div>
+
+                <div class="container" style="background-color:#f1f1f1">
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                        class="cancelbtn">Cancel</button>
+                    <span class="psw">Forgot <a href="#">password?</a></span>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="card">
+        <img class="productPhoto" src="img/alex-motoc-0POwK6iAiRQ-unsplash.jpg" alt="Product Picture">
+        <h4>Xbox Controller</h4>
+        <p class="price">$19.99</p>
+        <p><button>Add to Cart</button></p>
+    </div>
+
+    <div class="card">
+        <img class="productPhoto" src="img/alexunder-hess-bWZAPKm0zZE-unsplash.jpg" alt="Product Picture">
+        <h4>Wireless Headphones</h4>
+        <p class="price">$19.99</p>
+        <p><button>Add to Cart</button></p>
+    </div>
+
+    <div class="card">
+        <img class="productPhoto" src="img/curology-SjqgfcH207A-unsplash.jpg" alt="Product Picture">
+        <h4>Shampoo</h4>
+        <p class="price">$19.99</p>
+        <p><button>Add to Cart</button></p>
+    </div>
+
+    <div class="card">
+        <img class="productPhoto" src="img/daniel-korpai-hbTKIbuMmBI-unsplash.jpg" alt="Product Picture">
+        <h4>watch</h4>
+        <p class="price">$19.99</p>
+        <p><button>Add to Cart</button></p>
+    </div>
+
+    <div class="card">
+        <img class="productPhoto" src="img/giorgio-trovato-K62u25Jk6vo-unsplash.jpg" alt="Product Picture">
+        <h4>Sunglasses</h4>
+        <p class="price">$19.99</p>
+        <p><button>Add to Cart</button></p>
+    </div>
+
+    <div class="card">
+        <img class="productPhoto" src="img/grant-ritchie-n_wXNttWVGs-unsplash.jpg" alt="Product Picture">
+        <h4>Bluetooth Speaker</h4>
+        <p class="price">$19.99</p>
+        <p><button>Add to Cart</button></p>
+    </div>
+
+    <div class="card">
+        <img class="productPhoto" src="img/irene-kredenets-dwKiHoqqxk8-unsplash.jpg" alt="Product Picture">
+        <h4>Sneakers</h4>
+        <p class="price">$19.99</p>
+        <p><button>Add to Cart</button></p>
+    </div>
+
+    <div class="card">
+        <img class="productPhoto" src="img/joan-tran-reEySFadyJQ-unsplash.jpg" alt="Product Picture">
+        <h4>Bottle</h4>
+        <p class="price">$19.99</p>
+        <p><button>Add to Cart</button></p>
+    </div>
+
+    <div class="card">
+        <img class="productPhoto" src="img/kiran-ck-LSNJ-pltdu8-unsplash.jpg" alt="Product Picture">
+        <h4>Headphones</h4>
+        <p class="price">$19.99</p>
+        <p><button>Add to Cart</button></p>
+    </div>
+
+    <div class="card">
+        <img class="productPhoto" src="img/paul-gaudriault-a-QH9MAAVNI-unsplash.jpg" alt="Product Picture">
+        <h4>Sneakers</h4>
+        <p class="price">$19.99</p>
+        <p><button>Add to Cart</button></p>
+    </div>
+
+    <div class="card">
+        <img class="productPhoto" src="img/varun-gaba-dcgB3CgidlU-unsplash.jpg" alt="Product Picture">
+        <h4>Camera</h4>
+        <p class="price">$19.99</p>
+        <p><button>Add to Cart</button></p>
+    </div>
+
+    <div class="card">
+        <img class="productPhoto" src="img/dan-edge-VZKl6bdFqmA-unsplash.jpg" alt="Product Picture">
+        <h4>Sneakers</h4>
+        <p class="price">$19.99</p>
+        <p><button>Add to Cart</button></p>
+    </div>
+
+    <div class="card">
+        <img class="productPhoto" src="img/giorgio-trovato-LV_4qM5Gf9c-unsplash.jpg" alt="Product Picture">
+        <h4>Sneakers</h4>
+        <p class="price">$19.99</p>
+        <p><button>Add to Cart</button></p>
+    </div>
+
+    <div class="card">
+        <img class="productPhoto" src="img/subtle-cinematics-uHJeceRK89I-unsplash.jpg" alt="Product Picture">
+        <h4>Slr</h4>
+        <p class="price">$19.99</p>
+        <p><button>Add to Cart</button></p>
+    </div>
+</body>
+
+</html>
