@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In Page</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="split left">
+        <div class="centered">
+            <h2>Log In</h2>
+            <form action="/action_page.php" method="post">
+                <div class="container">
+                    <input type="text" placeholder="email" name="uname" required>
+
+                    <input type="password" placeholder="Password" name="psw" required>
+
+                    <button id="submit" type="submit">Login</button>
+                    <label id="remember">
+                        <input type="checkbox" checked="checked" name="remember"> Remember me
+                    </label>
+                </div>
+
+                <div class="container">
+                    <p id="connect">
+                        Or Connect With
+                    </p>
+                    <img class="social" src="img/facebook-app-symbol.png" alt="facebook">
+                    <img class="social" src="img/twitter.png" alt="tweeter">
+                    <img class="social" src="img/github.png" alt="github">
+                    <img class="social" src="img/linkedin.png" alt="linkedin">
+                </div>
+        </div>
+        </form>
+    </div>
+    </div>
+    <div class="split right">
+        <div class="centered">
+            <img id="logo" src="img/add-user.png" alt="register logo">
+            <h2>Hello, Friend!</h2>
+            <p>
+                Enter your personal details and start journey with us
+            </p>
+            <button id="register">REGISTER</button>
+            <img id="regpic" src="img/arrow-right.png" alt="regpic">
+        </div>
+    </div>
+</body>
+
+</html>
