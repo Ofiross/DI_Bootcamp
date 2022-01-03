@@ -1,0 +1,77 @@
+body {
+    margin: auto 0;
+    background-image: url('https://cdn.pixabay.com/photo/2019/03/09/13/31/email-4044165_960_720.jpg');
+    font-family: 'Khand', sans-serif;
+    text-transform: uppercase;
+}
+
+header {
+    text-align: center;
+    background: rgb(1, 119, 128);
+    border: 1px solid rgb(1, 119, 128);
+    border-bottom: 20px solid white;
+    color: white;
+}
+
+#linkButton {
+    margin: 10px;
+    padding-left: 3px;
+    padding-right: 3px;
+    background-color: rgb(54, 199, 243);
+    border: 3px solid rgb(54, 199, 243);
+    border-radius: 5px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+
+h1 {
+    text-align: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.myForm {
+    width: 50%;
+}
+
+p {
+    margin: 1px;
+}
+
+label, p {
+    font-weight: 600;
+    text-shadow: 0px 0px 10px black, 0px 0px 10px rgb(73, 72, 72);
+    color: white;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    justify-content: center;
+    gap: 30px;
+}
+
+select {
+    width: 570px;
+}
+
+button {
+    background-color: rgb(1, 119, 128);
+    padding: 15px 25px;
+    border: 1px solid rgb(1, 119, 128);
+    border-radius: 5px;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Khand', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+
+}
+
+

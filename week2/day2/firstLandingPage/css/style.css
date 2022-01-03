@@ -1,0 +1,104 @@
+body {
+    background: url('https://globalfindex.worldbank.org/sites/globalfindex/themes/globalfindex/images/maps.png');
+    background-repeat: no-repeat;
+    background-size: auto;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#bodyBackground {
+
+}
+
+
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    padding-top: 20px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 3rem;
+    color: rgb(164, 164, 245);
+    text-shadow: 1px 1px black;
+    margin: 1px;
+}
+
+h3, .whoIs {
+    color: white;
+}
+
+
+#statistics {
+    margin-top: 200px;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+
+.yearlyNumbers {
+    text-align: center;
+    text-shadow: 1px 1px rgb(164, 164, 245);
+    width: 300px;   
+}
+
+#testimonials {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-weight: 400;
+}
+
+
+.usersComments {
+    border: 1px solid rgb(105, 105, 105);
+    padding: 10px;
+    color: rgb(105, 105, 105);
+    text-align: center;
+    width: 350px;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+.firstTestimonial {
+    background: linear-gradient(180deg, white 60%, #f060af 60%);
+}
+
+.secondTestimonial {
+    background: linear-gradient(180deg, white 60%, #3b9cf7 60%);
+    position: relative;
+    top: 150px;
+}
+
+.thirdTestimonial{
+    background: linear-gradient(180deg, white 60%, #5bfcb1 60%);
+    position: relative;
+    bottom: 50px;
+}
+
+img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 50px;
+    height: 50px;
+    max-width: 50px;
+    max-height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.footer {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+
