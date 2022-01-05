@@ -1,0 +1,74 @@
+header {
+    background: linear-gradient(
+        rgba(37, 37, 37, 0.7), 
+        rgba(44, 44, 44, 0.7)
+      ), url('https://cdn.pixabay.com/photo/2018/07/13/18/48/career-3536331_960_720.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 60vh;
+    background-size: cover;
+    display: block;
+}
+
+
+
+.lime {
+    color: rgb(132, 251, 19);
+}
+
+.logoText{
+    font-size: 10px;
+}
+
+.or {
+    font-size: 9px;
+    margin-top: 5px;
+}
+
+li {
+    font-size: 12px;
+}
+
+.active {
+    border-bottom: solid rgb(132, 251, 19);
+    border-width: 2px 5px;
+}
+
+.searchBar {
+    height: 10px;
+}
+
+#search-button {
+    color: rgb(255, 255, 255);
+    background: rgb(132, 251, 19);
+    border: solid rgb(132, 251, 19);
+    border-width: 6px 30px;
+    border-radius: 5px;
+}
+
+.card-body {
+    background-color: rgb(132, 251, 19);
+    color: white;
+}
+
+.card-link {
+    border-bottom: solid white;
+}
+
+.all {
+    background-color: rgb(132, 251, 19);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.line {
+    color: transparent;
+    text-decoration: underline black;
+    margin-bottom: 20px;
+}
