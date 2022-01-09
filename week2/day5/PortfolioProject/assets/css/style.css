@@ -1,10 +1,10 @@
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: #272829;
 }
 
 h1, h2, h3, h4, h5 {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 #hilighted {
@@ -41,7 +41,7 @@ h1, h2, h3, h4, h5 {
   font-weight: 600;
   -moz-text-align-last: center;
   text-align-last: center;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 #header .profile h1 a, #header .profile h1 a:hover {
   color: #fff;
@@ -201,7 +201,7 @@ h1, h2, h3, h4, h5 {
   text-shadow: 2px 0 0 rgb(0, 0, 0), -2px 0 0 rgb(0, 0, 0), 0 2px 0 rgb(0, 0, 0), 0 -2px 0 rgb(0, 0, 0), 1px 1px rgb(0, 0, 0), -1px -1px 0 rgb(0, 0, 0), 1px -1px 0 rgb(0, 0, 0), -1px 1px 0 rgb(0, 0, 0);
   margin-bottom: 50px;
   font-size: 26px;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 #hero p {
@@ -337,7 +337,7 @@ section {
   text-transform: uppercase;
   display: block;
   font-weight: 600;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: #050d18;
 }
 .skills .progress .skill .val {
@@ -390,7 +390,7 @@ section {
 .resume .resume-item {
   padding: 0 0 20px 20px;
   margin-top: -2px;
-  border-left: 2px solid #1f5297;
+  border-left: 2px solid #222222;
   position: relative;
 }
 .resume .resume-item h4 {
@@ -398,13 +398,14 @@ section {
   font-size: 18px;
   font-weight: 600;
   text-transform: uppercase;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: #050d18;
   margin-bottom: 10px;
 }
 .resume .resume-item h5 {
   font-size: 16px;
-  background: #e4edf9;
+  background: #c7c7c7;
+  border-radius: 5px;
   padding: 5px 15px;
   display: inline-block;
   font-weight: 600;
@@ -424,11 +425,11 @@ section {
   position: absolute;
   width: 16px;
   height: 16px;
-  border-radius: 50px;
+  border-radius: 5px;
   left: -9px;
   top: 0;
   background: #fff;
-  border: 2px solid #1f5297;
+  border: 2px solid #222222;
 }
 
 /*-------------------Footer--------------------*/
