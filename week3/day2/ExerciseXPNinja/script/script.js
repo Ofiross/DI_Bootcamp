@@ -35,23 +35,35 @@ if (findingNemo.includes("Nemo")) {
 
 /*---------------Exercise 4 : Boom-------------*/
 
-let userNumber = Number(prompt("Please insert a number"));
+let userNumber = parseInt(prompt("Please insert a number"));
 
-if (userNumber < 2) {
-    result = ("boom");
-    console.log(result);
-} else if (userNumber % 2 === 0 && userNumber > 2 && userNumber % 5 == 0) {
-    result = (("b" + ("o".repeat(userNumber) + 'm' + '!')));
-    console.log(result.toUpperCase());
-} else if (userNumber % 2 === 0 && userNumber > 2) {
-    result = (("b" + ("o".repeat(userNumber) + 'm' + '!')));
-    console.log(result);
-} else if (userNumber > 2) {
-    result = (("b" + ("o".repeat(userNumber) + 'm')));
-    console.log(result);
-} else if (userNumber % 2 === 0) {
-    result = ("boom" + "!")
-    console.log(result);
-}
+let userNumberOfChoice = [
+    userNumber < 2,
+    userNumber % 2 === 0 && userNumber > 2 && userNumber % 5 == 0,
+    userNumber % 2 === 0 && userNumber > 2,
+    userNumber > 2,
+    userNumber % 2 === 0
+];
 
-
+switch (userNumberOfChoice.indexOf(true)) {
+    case 0:
+        result = ("boom");
+        console.log(result);
+        break
+    case 1:
+        result = (("b" + ("o".repeat(userNumber) + 'm' + '!')));
+        console.log(result.toUpperCase());
+        break
+    case 2:
+        result = (("b" + ("o".repeat(userNumber) + 'm' + '!')));
+        console.log(result);
+        break
+    case 3:
+        result = (("b" + ("o".repeat(userNumber) + 'm')));
+        console.log(result);
+        break
+    case 4:
+        result = ("boom" + "!")
+        console.log(result);
+        break
+};
