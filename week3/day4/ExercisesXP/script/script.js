@@ -50,12 +50,24 @@ if (userChoice % 2 == 0) {
 let users = ["Lea123", "Princess45", "cat&doglovers", "helooo@000"];
 let usersNumber = users.slice(2).length;
 
-if (users.length > 2) {
-    console.log(`${users[0]} and ${users[1]} are online and there are other ${usersNumber} additional users online right now`)
-} else if (users.length === 2 && users.length > 1) {
-    console.log(`${users[0]} and ${users[1]} are online`)
-} else if (users.length === 1) {
-    console.log(`${users} is online`)
-} else {
-    console.log(`no one is online`)
-}
+let onlineUsers = [
+    users.length > 2,
+    users.length === 2 && users.length > 1,
+    users.length === 1
+];
+
+switch (onlineUsers.indexOf(true)) {
+    case 0:
+        console.log(`${users[0]} and ${users[1]} are online and there are other ${usersNumber} additional users online right now`)
+        break;
+    case 1:
+        console.log(`${users[0]} and ${users[1]} are online`)
+        break;
+    case 2:
+        console.log(`${users} is online`)
+        break;
+    default:
+        console.log(`no one is online`)
+        break;
+
+};
