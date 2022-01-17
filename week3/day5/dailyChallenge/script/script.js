@@ -1,10 +1,18 @@
-/*--------------Daily Challenge: Stars------------*/
+/*--------------Daily Challenge------------*/
+let starsAround = () => {
+    let str = prompt("Please insert a sentence with comma between each word")
+    let wordLength = str.split(',').map(item => '' + item.trim());
+    let longestWord = 0;
+    for (let i = 0; i < wordLength.length; i++) {
+        if (wordLength[i].length > longestWord) {
+            longestWord = wordLength[i].length + 4
+        }
+    };
 
-/*1. Write a JavaScript program that recreates the pattern below.
-2. Do this challenge twice: first by using one loop, then by using two nested for loops (Nested means one inside the other - check out “nested for loops” on Google).
-3. Do this Daily Challenge by youself, without looking at the answers on the internet */
-
-
-for (let i = 1; i <= 6; i++) {
-    console.log("*".repeat(i));
+    let arrayFromString = str.split(',').map(item => '* ' + item.trim() + ' *');
+    let star = "*"
+    let stars = star.repeat(longestWord)
+    arrayFromString.push(stars)
+    arrayFromString.splice(0, 0, stars)
+    console.log(arrayFromString.join("\n"))
 }
