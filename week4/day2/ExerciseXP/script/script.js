@@ -63,25 +63,31 @@ calculateTip();
 2. In the function, loop through numbers 0 to 500.
 3. Console.log all the numbers divisible by 23.
 4. At the end, console.log the sum of all numbers that are divisible by 23.*/
-
 let isDivisible = () => {
     let divisible = [];
-    for (let i = 0; i <= 500; i++) {
+    const reducer = (previousV, currentV) => previousV + currentV;
+    for (let i = 1; i <= 500; i++) {
         if (i % 23 === 0) {
             divisible.push(i);
         }
     }
+    console.log(`the array sum is ${divisible.reduce(reducer)}`)
     return divisible
 }
+
 isDivisible();
 
 /*5. Bonus: Add a parameter divisor to the function.*/
 let isDivisible2 = (divisor) => {
-    for (let i = 0; i <= 500; i++) {
+    let divisible = [];
+    const reducer = (previousV, currentV) => previousV + currentV;
+    for (let i = divisor; i <= 500; i++) {
         if (i % divisor === 0) {
-            console.log(i)
+            divisible.push(i)
         }
     }
+    console.log(`the array sum is ${divisible.reduce(reducer, divisor)}`)
+    return divisible
 }
 isDivisible2();
 
