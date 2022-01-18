@@ -167,7 +167,7 @@ let hotelCost = () => {
         numberOfNights = prompt('Please indicate the amout of nights you would like to book your room for')
     };
     let totalForNights = numberOfNights * 140
-    return (`The total amount for the number of nights you have booked is ${totalForNights}$`)
+
 };
 hotelCost();
 
@@ -188,10 +188,10 @@ let planeRideCost = () => {
     let upperCase = destination.charAt(0).toUpperCase() + destination.slice(1);
     if (upperCase in destinations) {
         let TotalTickes = destinations[upperCase]
-        return `${upperCase}: ${TotalTickes}`
+
     } else {
         let TotalTickes = 300
-        return `All other destination : ${TotalTickes}`
+
     }
 };
 planeRideCost();
@@ -205,10 +205,10 @@ let rentalCarCost = () => {
     };
     if (carRental > 10) {
         let totalCar = carRental * 38
-        return `The total amount for your rental period is ${totalCar}`
+
     } else {
         let totalCar = carRental * 40
-        return `The total amount for your rental period is ${totalCar}`
+
     }
 };
 rentalCarCost();
@@ -217,50 +217,6 @@ rentalCarCost();
 /*4. Define a function called totalVacationCost() that returns the total cost of the user’s vacation by calling the 3 functions that you created above.*/
 
 let totalVacationCost = () => {
-    let hotelCost = () => {
-        let numberOfNights = prompt('Please indicate the amout of nights you would like to book your room for')
-        while (numberOfNights.length === 0) {
-            alert('You didnt inserted any number of nights for your booking!')
-            numberOfNights = prompt('Please indicate the amout of nights you would like to book your room for')
-        };
-        totalForNights = numberOfNights * 140
-    };
-    hotelCost();
-
-    let planeRideCost = () => {
-        let destinations = {
-            London: 183,
-            Paris: 220,
-            Rome: 400
-        };
-        let destination = prompt('Please indicate the destination for your vacation using alphabetical only')
-        while (destination == "" || isNaN(destination) === false || destination == null || (!/^[a-zA-Z]+$/.test(destination))) {
-            alert('Please check the information you have entered and try again')
-            destination = prompt('Please indicate the destination for your vacation using alphabetical only')
-        }
-        let upperCase = destination.charAt(0).toUpperCase() + destination.slice(1);
-        if (upperCase in destinations) {
-            TotalTickes = destinations[upperCase]
-        } else {
-            TotalTickes = 300
-        }
-    };
-    planeRideCost();
-
-    let rentalCarCost = () => {
-        let carRental = +prompt('For how many days would you like to rent a car?')
-        while (isNaN(carRental) == true) {
-            alert('you didnt inserted any number of days for your rental period!')
-            carRental = +prompt('For how many days would you like to rent a car?')
-        };
-        if (carRental > 10) {
-            totalCar = carRental * 38
-            console.log(totalCar)
-        } else {
-            totalCar = carRental * 40
-        }
-    };
-    rentalCarCost();
-    return `The price for a car rental will be ${totalCar}, the plane tickets will cost ${TotalTickes}$ and the hotel will cost ${totalForNights}`
+    console.log(`the total car price will be${rentalCarCost()} the total plane tickets price will be ${planeRideCost()} and the total price for hotel staying will be${hotelCost()}`)
 }
 totalVacationCost();
