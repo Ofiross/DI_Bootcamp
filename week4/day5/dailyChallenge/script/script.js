@@ -13,6 +13,8 @@ planetsOfSlSs.forEach(e => {
     planetsDiv.setAttribute('class', e);
     planetsDiv.classList.add('planet')
     document.getElementsByClassName('listPlanets')[0].appendChild(planetsDiv)
+    let text = document.createTextNode([e]);
+    document.getElementsByClassName(e)[0].appendChild(text)
 });
 
 document.getElementsByClassName('Mercury')[0].style.backgroundColor = "lightblue";
