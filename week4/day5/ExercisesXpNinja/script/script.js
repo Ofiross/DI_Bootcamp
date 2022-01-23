@@ -19,44 +19,50 @@ let createCalendar = (year, month) => {
 
     tblBody.appendChild(headerRow);
 
-    const firstDay = new Date(year, month, 0).getDay();
+    const firstDay = new Date(year, month, 5).getDay();
     console.log(firstDay)
+    today = new Date();
 
-    const date = firstDay + 1;
+    let date = 1;
+    for (let i = 0; i < 6; i++) {
+        // creates a table row
+        let row = document.createElement("tr");
 
-    for (var i = 0; i < 5; i++) {
-
-        var row = document.createElement("tr");
-
-        for (var j = 0; j < 7; j++) {
+        //creating individual cells, filing them up with data.
+        for (let j = 0; j < 7; j++) {
             if (i === 0 && j < firstDay) {
-                let cell = document.createElement("td");
-                let cellText = document.createTextNode('');
+                cell = document.createElement("td");
+                cellText = document.createTextNode("");
                 cell.appendChild(cellText);
                 row.appendChild(cell);
-            } else if (date > daysInMonth(month, year)) {
+            }
+            else if (date > daysInMonth(month, year)) {
                 break;
-            } else {
-                cell = document.createElement("td");
-                let cellText = document.createTextNode(firstDay)
-                cell.setAttribute("data-date", date);
-                cell.setAttribute("data-month", month + 1);
-                cell.setAttribute("data-year", year);
-                cell.className = "date-picker";
-                cell.innerHTML = "<span>" + date + "</span>";
-                row.appendChild(cell);
-
-
             }
 
-            tblBody.appendChild(row);
-        }
+            else {
+                cell = document.createElement("td");
+                cellText = document.createTextNode(date);
+                if (date === today.getDate() && year === today.getFullYear() && month === today.getMonth()) {
+                    cell.classList.add("bg-info");
+                } // color today's date
+                cell.appendChild(cellText);
+                row.appendChild(cell);
+                date++;
+            }
 
+            tblBody.appendChild(row); // appending each row into calendar body
+        }
         tbl.appendChild(tblBody);
         body.appendChild(tbl);
         tbl.setAttribute("border", "2");
+
     }
+
+
 }
+
+
 let daysInMonth = (month, year) => {
 
     return new Date(year, month, 0).getDate();
