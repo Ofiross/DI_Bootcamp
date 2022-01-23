@@ -1,5 +1,5 @@
 let createCalendar = (year, month) => {
-
+    //creating a table header with days
     const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
 
@@ -19,16 +19,19 @@ let createCalendar = (year, month) => {
 
     tblBody.appendChild(headerRow);
 
-    const firstDay = new Date(year, month, 6).getDay();
+    //searching for the first day of the month 0 for sunday untill 6 for saturday
+    const firstDay = (new Date(`${month}, 1, ${year}`)).getDay();
     console.log(firstDay)
-    today = new Date();
 
+    //starting day of the month
     let date = 1;
+    //creating rows for calander
     for (let i = 0; i < 6; i++) {
-        // creates a table row
+
         let row = document.createElement("tr");
 
-        //creating individual cells, filing them up with data.
+        //creating days for month calander table
+        //base on the index of the starting day of the month, the days will stard as empty string with out number inside
         for (let j = 0; j < 7; j++) {
             if (i === 0 && j < firstDay) {
                 cell = document.createElement("td");
@@ -36,22 +39,20 @@ let createCalendar = (year, month) => {
                 cell.appendChild(cellText);
                 row.appendChild(cell);
             }
+            //if the date is bigger than the days in the month break out from the loop to stop creating days
             else if (date > daysInMonth(month, year)) {
                 break;
             }
-
+            //creates the dates starting from 1 to the days in the month.
             else {
                 cell = document.createElement("td");
                 cellText = document.createTextNode(date);
-                if (date === today.getDate() && year === today.getFullYear() && month === today.getMonth()) {
-                    cell.classList.add("bg-info");
-                } // color today's date
                 cell.appendChild(cellText);
                 row.appendChild(cell);
                 date++;
             }
-
-            tblBody.appendChild(row); // appending each row into calendar body
+            //adding all to our table
+            tblBody.appendChild(row);
         }
         tbl.appendChild(tblBody);
         body.appendChild(tbl);
@@ -62,7 +63,7 @@ let createCalendar = (year, month) => {
 
 }
 
-
+//function to check how many days are in a year
 let daysInMonth = (month, year) => {
 
     return new Date(year, month, 0).getDate();
