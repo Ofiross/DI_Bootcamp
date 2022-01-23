@@ -1,6 +1,7 @@
 /*-----------------Daily Challenge: 99 Bottles Of Beer--------------*/
 const bottlesOfBeer = () => {
     let confirmation = confirm("This is the 99 Bottles Of Beer lyrics creator, woult you like to try it?");
+
     if (confirmation === false) {
         return "Ok see you around"
     };
@@ -9,7 +10,16 @@ const bottlesOfBeer = () => {
 
 
     let userBottleNum = parseInt(prompt("Please choose a number from 1 - 99 to create the first amount of bottles for the lyrics"));
-    while (userBottleNum == "" || isNaN(userBottleNum) === true || userBottleNum > 99 || userBottleNum < 1) {
+
+    let checking = num => [
+        num === "",
+        isNaN(num),
+        num > 99,
+        num < 1
+    ].some(e => e);
+
+
+    while (checking(userBottleNum)) {
         alert("you should insert only NUMBER and it can only be between 1 - 99");
         userBottleNum = parseInt(prompt("Please choose a number from 1 - 99 to create the first amount of bottles for the lyrics"));
     };
