@@ -19,7 +19,7 @@ let createCalendar = (year, month) => {
 
     tblBody.appendChild(headerRow);
 
-    const firstDay = new Date(year, month, 5).getDay();
+    const firstDay = new Date(year, month, 6).getDay();
     console.log(firstDay)
     today = new Date();
 
