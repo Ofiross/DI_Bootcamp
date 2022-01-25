@@ -1,0 +1,16 @@
+body {
+    background: black;
+}
+
+#shape {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    text-align: center;
+    color: white;
+    border: 10px solid white;
+
+}

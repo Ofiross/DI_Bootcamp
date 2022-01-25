@@ -60,9 +60,15 @@ const booksTable = () => {
         Object.values(bk).forEach(text => {
             let cell = document.createElement('td')
             let textNode = document.createTextNode(text);
-
             cell.appendChild(textNode);
-            if (alreadyRead = true) {
+            if (Object.keys(bk)[2] === "image") {
+                let image = createElement('img')
+                image.src = Object.keys(bk)[2][text]
+                image.width = '100'
+                cell.append(image)
+            }
+
+            else if (alreadyRead = true) {
                 row.style.background = 'red'
             }
             row.appendChild(cell);
