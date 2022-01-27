@@ -1,0 +1,147 @@
+.allApp {
+    background-color: #A9A9A9;
+    width: 745px;
+    height: 695px;
+}
+
+.menu {
+    display: flex;
+    margin-bottom: 50px;
+    width: 186px;
+    height: 622px;
+    background-color: #A9A9A9;
+    border-right: solid;
+}
+
+.firstColumn, .secondColumn, .firstColumn {
+    margin-top: 17px;
+}
+
+.colors {
+    margin: 5px;
+    border: 1px solid rgb(0, 0, 0);
+    width: 50px;
+    height: 80px;      
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 186px;
+    height: 60px;
+    background-color: #A9A9A9;
+}
+
+.clear {
+    width: 172px;
+    height: 50px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 25px;
+}
+
+.maintable {
+    display: grid;
+    grid-template-columns: repeat(55, 10px);
+    margin-top: -55px;
+}
+
+.table {
+    background-color: white;
+    width: 10px;
+    height: 20px;
+    border: 1px solid #A9A9A9;
+}
+
+/***********************colors for color picker********************/
+/*********1st column*********/
+/* .red {
+    background-color: #FF0000;
+}
+
+.yellow {
+    background-color: #FFFF00;
+}
+
+.green {
+    background-color: #008000;
+}
+
+.azure {
+    background-color: #87CEFA;
+}
+
+.blue {
+    background-color: #00008B;
+}
+
+.lollipop {
+    background-color: #EE82EE;
+}
+
+.grey {
+    background-color: #808080;
+}
+
+/*********2nd column*********/
+/* .orange {
+    background-color: #FF4500;
+}
+
+.olive {
+    background-color: #9ACD32;
+}
+
+.sky {
+    background-color: #40E0D0;
+}
+
+.lightBlue {
+    background-color: #1E90FF;
+}
+
+.purple {
+    background-color: #4B0082;
+}
+
+.pink {
+    background-color: #FFB6C1;
+}
+
+.black {
+    background-color: #000000;
+} */
+ 
+/*******3rd column*******/
+/* .papaya {
+    background-color: #FFA500;
+}
+
+.mint {
+    background-color: #90EE90;
+}
+
+.cyan {
+    background-color: #00FFFF;
+}
+
+.electricBlue {
+    background-color: #0000FF;
+}
+
+.grape {
+    background-color: #8B008B;
+}
+
+.lightGrey {
+    background-color: #D3D3D3;
+}
+
+.white {
+    background-color: #FFFFFF;
+} */
+
+
+
+/*******************************************************************/

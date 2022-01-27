@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        #container {
+            width: 400px;
+            height: 400px;
+            position: relative;
+            background: yellow;
+        }
+
+        #animate {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            background-color: red;
+        }
+
+        #biggerBox {
+            width: 400px;
+            height: 400px;
+            position: relative;
+            background: rgb(255, 86, 247);
+        }
+
+        #box {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            background-color: rgb(0, 0, 0);
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <p><button onclick="myMove()">Click Me</button></p>
+    <div id="container">
+        <div id="animate"></div>
+    </div>
+
+    <div id="biggerBox"></div>
+    <span id="box" draggable="true">Drug Me</span>
+
+
+    <script src="script/main.js"></script>
+</body>
+
+</html>

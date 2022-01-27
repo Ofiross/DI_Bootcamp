@@ -1,0 +1,55 @@
+body {
+    background: no-repeat center center fixed; 
+    background-image: linear-gradient(#FF4D57, #FF5C7F);
+    font-family: 'Open Sans', sans-serif;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+h1 {
+    color: white;
+}
+
+#taskAdder {
+    margin-left: -40px;
+    width: 204px;
+    padding-right: 70px;
+    border-radius: 2px;
+    border: transparent;
+    height: 25px;
+    font-size: 18px;
+}
+
+#addBtn {
+    margin-left: -50px;
+    background-color: transparent;
+    border: transparent;
+}
+
+.listTasks {
+    margin-top: 10px;
+    background-color: #FFFFFF;
+    width: 278px;
+    margin-right: 40px;
+}
+
+#clearButton {
+    margin-left: 220px;
+    background-color: transparent;
+    border: transparent;
+    font-size: 18px;
+}
+
+input:focus { 
+    outline: none !important;
+  
+}
+textarea:focus { 
+    outline: none !important;
+    
+}
