@@ -1,3 +1,6 @@
+/**********************Ex1*************************/
+
+
 let ani = document.getElementById('animate')
 let position = 0;
 let movementSpeed = 1
@@ -12,6 +15,45 @@ let myMove = () => {
 };
 
 
+/**********************Ex2*************************/
+/* let smallsq = document.getElementById("box");
+let targetsq = document.getElementById("biggerBox");
+
+smallsq.addEventListener("dragstart", dragStart);
+
+let dragStart = (e) => {
+    e.dataTransfer.setData("text", e.target.id);
+};
+
+
+
+targetsq.addEventListener("dragover", dragOver);
+targetsq.addEventListener("drop", drop);
+targetsq.addEventListener("dragenter", dragEnter);
+targetsq.addEventListener("dragleave", dragLeave);
+
+
+let dragOver = (e) => {
+    e.preventDefault();
+};
+
+let drop = (e) => {
+    e.preventDefault();
+    let dataSquare = e.dataTransfer.getData("text");
+    let box = document.getElementById(dataSquare);
+    e.target.appendChild(box);
+};
+
+let dragEnter = (e) => {
+    e.target.style.backgroundColor = "green"
+    e.target.classList.add('over');
+};
+
+function dragLeave(e) {
+    e.target.style.backgroundColor = "lightblue"
+    e.target.classList.remove('over');
+};
+ */
 
 let square = document.getElementById('box');
 square.addEventListener("dragstart", function (event) {

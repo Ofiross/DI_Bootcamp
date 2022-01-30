@@ -3,9 +3,7 @@ let starsAround = () => {
     let str = prompt("Please insert a sentence with comma between each word").split(',')
         .map(item => '' + item
             .trim());
-    /*     let wordLength = str.split(',')
-            .map(item => '' + item
-                .trim()); */
+
     let longestWord = 0;
     for (let i = 0; i < str.length; i++) {
         if (str[i].length > longestWord) {
