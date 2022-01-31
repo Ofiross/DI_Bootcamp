@@ -1,25 +1,17 @@
-let num = '*'
-function generate_table() {
+let pattern = [0, 0, 1, 1, 1, 0, 0,
+    0, 1, 0, 0, 0, 1, 0,
+    0, 1, 0, 0, 0, 1, 0,
+    0, 1, 0, 0, 0, 1, 0,
+    0, 1, 1, 1, 1, 1, 0,
+    0, 1, 0, 0, 0, 1, 0,
+    0, 1, 0, 0, 0, 1, 0];
 
-    var body = document.getElementsByTagName("body")[0];
 
-    var tbl = document.createElement("table");
-    tbl.setAttribute('id', 'table')
-
-    for (var i = 0; i < 7; i++) {
-        var row = document.createElement("tr");
-
-        for (var j = 0; j < 7; j++) {
-
-            var cell = document.createElement("td");
-            var cellText = document.createTextNode(num);
-            cell.appendChild(cellText);
-            row.appendChild(cell);
-        }
-        tbl.appendChild(row);
-    }
-    body.appendChild(tbl);
-}
-generate_table()
-
-let tbl = document.getElementById('table')
+for (let i = 0; i < 49; i++) {
+    canvas = document.createElement("div");
+    canvas.setAttribute("class", "canvas");
+    document.getElementById("table").appendChild(canvas);
+    let star = document.createTextNode('*');
+    if (pattern[i])
+        canvas.appendChild(star)
+};
