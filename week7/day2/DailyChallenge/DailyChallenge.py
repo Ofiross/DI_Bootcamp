@@ -61,3 +61,21 @@ def code_solution(code):
 
 
 code_solution(neos_code)
+
+
+# -------------------------------Second Approach-------------------------------
+symbols = ['#', '@', '$', '%', '^', '!']
+nums = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
+
+rows_len = len(neos_code)
+columns_len = len(neos_code[0])
+result = " "
+for i in range(columns_len):  # 0, 1, 2
+    for j in range(rows_len):  # 0 - 7
+        if neos_code[j][i].isalpha():
+            result += neos_code[j][i]
+        elif neos_code[j][i] in symbols:
+            result += " "
+        elif neos_code[j][i] in nums:
+            result += ""
+print(result)
