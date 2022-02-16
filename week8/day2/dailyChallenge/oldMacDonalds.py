@@ -14,7 +14,7 @@ class Farm():
     def get_info(self):
         for k, v in self.animals.items():
             print(f'{k} : {v}')
-        return("     E-I-E-I-0!")
+        return("\tE-I-E-I-0!")
 
 
 macdonald = Farm("McDonald")
