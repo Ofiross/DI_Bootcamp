@@ -1,5 +1,6 @@
 from random import randint
 import random
+from unittest import result
 
 # Daily Challenge
 
@@ -36,7 +37,7 @@ class Dna(Chromosome):
 
 
 ofir_genetics = Dna()
-ofir_genetics_dna = ofir_genetics.dna_mutate()
+""" ofir_genetics_dna = ofir_genetics.dna_mutate() """
 
 
 class Organism():
@@ -45,17 +46,22 @@ class Organism():
         self.environment = environment
 
     def mutate_probability(self):
+        result_of_exercise = self.dna_result.dna_mutate()
+        generation_list = []
         generation = 0
-        while self.environment == 0:
-            if 0 in self.dna_result:
+        while 0 in result_of_exercise:
+            generation += 1
+            generation_list.append(result_of_exercise)
+            if 0 in generation_list:
                 generation += 1
                 self.environment == 0
             else:
                 self.environment == 1
-            print(
-                f'The numbet of generations it took to create a mutate is: {generation}')
-            print(self.dna_result)
+
+        print(
+            f'The number of generations it took to create a mutate is: {generation}')
+        print(generation_list)
 
 
-ofir_organism = Organism(ofir_genetics_dna)
+ofir_organism = Organism(ofir_genetics)
 ofir_organism.mutate_probability()

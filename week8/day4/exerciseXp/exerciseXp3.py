@@ -3,7 +3,7 @@ from random import randint
 from exerciseXp import Dog
 
 
-class PetDog(Dog):
+class PetDog():
     def __init__(self, trained=False):
         self.trained = trained
 
