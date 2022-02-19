@@ -5,14 +5,14 @@ def get_user_menu_choice():
     options = ['1', '2', '3']
     while True:
         game_menu = input("""
-              ************************
-              *      -----------     *
-              *     | Main Menu |    *
-              *      -----------     *
-              *  1 Play a new game   *
-              *  2   Show scores     *
-              *  3      Quit         *
-              ************************
+            ************************
+            *      -----------     *
+            *     | Main Menu |    *
+            *      -----------     *
+            *  1 Play a new game   *
+            *  2   Show scores     *
+            *  3      Quit         *
+            ************************
               Enter your choice: """)
 
         if game_menu not in options:
