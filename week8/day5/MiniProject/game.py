@@ -1,5 +1,4 @@
 import random
-from unittest import result
 
 
 class Game:
@@ -12,13 +11,13 @@ class Game:
         accepteble_input = ['1', '2', '3']
         while True:
             player_choice = input("""
-            ***************************************************
-            *  What form would you like to be:                *
-            *  1  for Rock                                    *
-            *  2  for Paper                                   *
-            *  3  for Scissors                                *
-            ***************************************************
-                Please choose from the 3 possibilities: """)
+                            ***************************************************
+                            *  What form would you like to be:                *
+                            *  1  for Rock                                    *
+                            *  2  for Paper                                   *
+                            *  3  for Scissors                                *
+                            ***************************************************
+                                Please choose from the 3 possibilities: """)
             if player_choice not in accepteble_input:
                 continue
             break
@@ -40,19 +39,22 @@ class Game:
         self.computer_item = computer_item
 
         if user_item == computer_item:
+            print("\n")
             print(
                 f'Wow, your choice of {user_item.upper()} is exactly like the {computer_item.upper()} form of the PC.')
             return('draw')
         elif (user_item == "rock" and computer_item == "scissors") or (user_item == "paper" and computer_item == "rock") or (user_item == "scissors" and computer_item == "rock"):
+            print("\n")
             print(
                 f'Your form {user_item.upper()} is wining over PC choice of {computer_item.upper()}.')
-            print("So, you are the winner of this round!!!")
+            print("You are the winner of this round!!!")
             return('win')
         elif (computer_item == "rock" and user_item == "scissors") or (computer_item == "paper" and user_item == "rock") or (computer_item == "scissors" and user_item == "rock"):
+            print("\n")
             print(
                 f'Sorry, PC form is {computer_item.upper()} and it is wining over your {user_item.upper()} form.')
             print("Try better next time, you have lost PC won!")
-            return('loss')
+        return('loss')
 
     def play(self):
         player = self.get_user_form()
