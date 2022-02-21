@@ -42,6 +42,7 @@ class Game:
             print("\n")
             print(
                 f'Wow, your choice of {user_item.upper()} is exactly like the {computer_item.upper()} form of the PC.')
+            print("It is a draw!")
             return('draw')
         elif (user_item == "rock" and computer_item == "scissors") or (user_item == "paper" and computer_item == "rock") or (user_item == "scissors" and computer_item == "rock"):
             print("\n")
