@@ -26,12 +26,12 @@ class Node:
 
     def add_node(self, child_node):
         if self.value:
-            if child_node < self.get_value():
+            if child_node < self.value:
                 if self.left is None:
                     self.left = Node(child_node)
                 else:
                     self.left.add_node(child_node)
-            elif child_node > self.get_value():
+            elif child_node > self.value:
                 if self.right is None:
                     self.right = Node(child_node)
                 else:
@@ -40,17 +40,17 @@ class Node:
             self.value = child_node
 
     def search_val(self, value):
-        if value < self.get_value():
+        if value < self.value:
             if self.left is None:
                 return str(value)+" Not Found"
-            return self.get_left().search_val(value)
+            return self.left.search_val(value)
 
-        elif value > self.get_value():
+        elif value > self.value:
             if self.right is None:
                 return str(value)+" Not Found"
-            self.get_right().search(value)
+            return self.right.search_val(value)
         else:
-            print(str(self.get_value()) + ' is found')
+            print(str(self.value) + ' is found')
 
     def print_tree(self):
         if self.left:
