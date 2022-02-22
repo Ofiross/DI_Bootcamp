@@ -12,11 +12,11 @@ class circle():
         return f'Radius is {self.radius}'
 
     def __repr__(self):
-        """Return a formal string that can be used to re-create this instance, invoked by repr()"""
         return f'Circle(radius={self.radius})'
 
     def __add__(self, other_circle):
-        return(self + other_circle)
+        self.radius += other_circle.radius
+        return self.radius
 
     def __gt__(self, other_circle):
         if self.radius > other_circle.radius:
