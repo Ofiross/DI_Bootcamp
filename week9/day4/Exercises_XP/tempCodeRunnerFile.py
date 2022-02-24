@@ -1,4 +1,11 @@
 
-    def move(self, building):
-        self.living_place = building
-        building.inhabitants.append(self)
+bob = Human(name="Bob", age=10)
+print(str(bob))
+
+alice = Human(name="Alice", age=20)
+print(str(bob))
+
+bob.move(tlv_building)
+alice.move(tlv_building)
+
+print(str(tlv_building))

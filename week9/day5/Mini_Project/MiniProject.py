@@ -15,52 +15,54 @@ class Human:
             self.family = []
 
     def add_family_member(self, person):
-        self.family.add(person)
-        person.family.add(self)
+        self.family.append(person)
+
+    def get_family_info(self):
+        for i, human in enumerate(self.family):
+            print(i+1, '->', human.name)
 
 
 class Queue:
-    def __init__(self, humans: List = []):
-        self.humans = humans
 
-    def add_person(self, person: Human):
-        if person.age or person.prioritary > 60:
+    def __init__(self, humans=None):
+        if not humans:
+            self.humans = []
+
+    def add_person(self, person):
+        if person.prioritary or person.age > 60:
+            self.humans.insert(0, person)
+        else:
             self.humans.append(person)
 
     def find_in_queue(self, person):
         return ([index for index, name in enumerate(self.humans) if name == person])
 
     def swap(self, person1, person2):
-        self.humans[self.find_in_queue(person1)], self.humans[self.find_in_queue(
-            person2)] = self.humans[self.find_in_queue(person2)], self.humans[self.find_in_queue(person1)]
+        first_person_index = self.humans.index(person1)
+        second_person_index = self.humans.index(person2)
+        self.humans.append(self.humans.pop(first_person_index))
+        self.humans.insert(first_person_index,
+                           self.humans.pop(second_person_index))
+        self.humans.insert(second_person_index, self.humans.pop())
 
     def get_next(self):
-        if not self.humans == None:
-            next_one = next(self.humans)
-            self.humans.pop(next_one)
-            return next_one
+        if len(self.humans) > 0:
+            return self.humans.pop(0)
         else:
+            print('No one more in the list.')
             return None
 
     def get_next_blood_type(self, blood_type):
-        if not self.humans == None:
-            blood_position = ([index for index, blood in enumerate(
-                self.humans) if blood == blood_type])
-            self.humans.pop(blood_position)
-            return blood_position
+        if len(self.humans) > 0:
+            for person in self.humans:
+                if person.blood_type == blood_type:
+                    return self.humans.pop(self.humans(person))
         else:
             return None
 
     def sort_by_age(self):
-        for i in range(len(self.humans)):
-            for j in range(i+1, len(self.humans)):
-                if self.humans[i] < self.humans[j]:
-                    self.humans[i], self.humans[j] = self.humans[j], self.humans[i]
-        return(self.humans)
+        self.humans.sort(reverse=True, key=lambda person: [person.age])
 
-    def rearrange_queue(self):
-        if len(self.humans) < 3:
-            return
-        for i in self.humans:
-            if next(self.humans) in self.humans.family:
-                self.humans.sort()
+    def get_list_info(self):
+        for i, human in enumerate(self.humans):
+            print(i+1, '->', human.name)
