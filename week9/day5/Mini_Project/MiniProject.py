@@ -66,3 +66,10 @@ class Queue:
     def get_list_info(self):
         for i, human in enumerate(self.humans):
             print(i+1, '->', human.name)
+
+    def rearrange_queue(self):
+        if len(self.humans) < 3:
+            return
+        for i in range(1, len(self.humans)):
+            if self.humans[i].family == self.humans[i]:
+                self.humans.sort(key=lambda person: [person.name])
