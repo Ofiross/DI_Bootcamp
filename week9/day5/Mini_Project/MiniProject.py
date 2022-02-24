@@ -62,5 +62,5 @@ class Queue:
         if len(self.humans) < 3:
             return
         for i in self.humans:
-            if i in self.humans.family:
+            if next(self.humans) in self.humans.family:
                 self.humans.sort()
