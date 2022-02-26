@@ -86,5 +86,5 @@ alice.move(tlv_building)
 
 print(str(tlv_building))
 
-tlv = City("tkv", [tlv_building])
+tlv = City("tlv", [tlv_building])
 tlv.info("TLV")
