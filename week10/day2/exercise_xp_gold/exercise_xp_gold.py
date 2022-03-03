@@ -1,6 +1,5 @@
 import random
 import re
-import string
 
 # Exercise 1
 string_to_check = "'k5k3q2g5z6x9bn'"

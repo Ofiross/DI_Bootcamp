@@ -5,7 +5,7 @@ fake = Faker()
 # Exercise 1
 
 
-""" def current_date():
+def current_date():
     todays_date = datetime.today().strftime('%d-%m-%Y')
     print(f'Todays date is:\n{todays_date}')
 
@@ -85,7 +85,7 @@ def age_on_diffrent_planet():
     print(f"{'-' * 45}\nYour age on other planets is as followed:\nEarth: {age_on_earth} Earth-years old\nMercury: {age_on_mercury} Earth-years old\nVenus: {age_on_venus} Earth-years old\nMars: {age_on_mars} Earth-years old\nJupiter: {age_on_jupiter} Earth-years old\nSaturn: {age_on_saturn} Earth-years old\nUranus: {age_on_uranus} Earth-years old\nNeptune: {age_on_neptune} Earth-years old\n{'-' * 45}")
 
 
-age_on_diffrent_planet() """
+age_on_diffrent_planet()
 
 
 # Exercise 6
