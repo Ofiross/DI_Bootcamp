@@ -33,6 +33,6 @@ class AnagramChecker:
         same_letters_words = []
         print('You can also create these words using these letters: ')
         for word in self.text:
-            if set(word) == set(word_check):
+            if (set(word) == set(word_check)) and len(word) == len(word_check):
                 same_letters_words.append(word)
         print(same_letters_words)
