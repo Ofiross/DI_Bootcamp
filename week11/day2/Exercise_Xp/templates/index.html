@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <title>Ofir Russ CV</title>
+</head>
+
+<body>
+    <h1>Ofir Russ CV</h1>
+    <img id="profilePic" src="{{url_for('static', filename='profile-img.jpg')}}" align="middle" />
+    <div id="cvSections1">
+        <div id="details">
+            <h3>Hobbies</h3>
+            <ul>
+                <li>Technologies</li>
+                <li>Sports</li>
+                <li>Cooking</li>
+                <li>Family time</li>
+            </ul>
+        </div>
+        <div id="details">
+            <h3>Skills</h3>
+            <ul>
+                <li>Excellent technical knowledge and technical problem solving</li>
+                <li>High coordination skills</li>
+                <li>Highly social person</li>
+                <li>Highly disciplined and work place committed</li>
+                <li>Quick Learner</li>
+            </ul>
+        </div>
+    </div>
+    <div id="cvSections2">
+        <div id="details">
+            <h3>Strengths</h3>
+            <ul>
+                <li>Love learning new things to perfection</li>
+                <li>Extremly organized person</li>
+                <li>Good judgment ability</li>
+                <li>Like to be always on time</li>
+            </ul>
+        </div>
+        <div id="details">
+            <h3>Weaknesses</h3>
+            <ul>
+                <li>Putting ahead of myself my surroundings even when not needed</li>
+                <li>Whith the need of being perfect on what I do it can sometimes makes me "waste" time</li>
+                <li>I focus too much on the details</li>
+                <li>Hard time letting go of a project</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

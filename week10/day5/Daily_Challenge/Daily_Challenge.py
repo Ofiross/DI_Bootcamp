@@ -11,17 +11,17 @@ class ResponseTime:
         requests.get(self.url)
         end = time.time()
         resp_time = end - start
-        print(f"Response time of {self.url} is: {resp_time}")
+        print(f"{resp_time}s")
 
 
-print('Lets check few websites response time:')
-print('\nGOOGLE:')
+print('Lets check websites response time:')
+print(f"{'-'*60}\nGOOGLE Response time:")
 google = ResponseTime('https://www.google.com')
 google.check_response_time()
-print('\nYNET:')
+print(f"{'-'*60}\nYNET Response time:")
 ynet = ResponseTime('https://www.ynet.co.il')
 ynet.check_response_time()
-print('\nIMDB:')
+print(f"{'-'*60}\nIMDB Response time:")
 imdb = ResponseTime('https://www.imdb.com')
 imdb.check_response_time()
 print('\n')
