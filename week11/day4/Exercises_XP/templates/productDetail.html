@@ -1,0 +1,66 @@
+<!-- extendind the index template -->
+{% extends "index.html" %}
+<!-- changing page title to each page -->
+{% block title %}Product Page{% endblock %}
+<!-- copying head data from the index template
+ -->
+{% block head %}
+{{super()}}
+{% endblock %}
+<!-- copying the navbar to the page -->
+{% block navbar %}
+{{super()}}
+{% endblock %}
+<!-- changing the h1 text -->
+{% block h1 %}<h1>{{ product[0]['Name'] }}</h1>{% endblock %}
+<!-- alert in case product is not in stock -->
+{% block alert %}
+{% if product[0]['Status'] != "Available" %}
+<div class="alert alert-danger" role="alert">
+    Sorry - this product is currently out of stock.
+</div>
+{% endif %}
+{% endblock %}
+<!-- using the div from index template -->
+{% block welcome %}
+{{super()}}
+{% endblock %}
+{% block content %}
+
+<h5 class="card-header">Product Details</h5>
+<div class="row">
+    <div class="col-sm-6">
+        <div class="card rightCard">
+            <p class="card-text">Product ID</p>
+            <p class="card-text">Category</p>
+            <p class="card-text">Main Category</p>
+            <p class="card-text">Tax Tarif Code</p>
+            <p class="card-text">Supplier Name</p>
+            <p class="card-text">Weight Measure</p>
+            <p class="card-text">Weight Unit</p>
+            <p class="card-text">Description</p>
+            <p class="card-text">Name</p>
+            <p class="card-text">Product Pic Url</p>
+            <p class="card-text">Status</p>
+            <p class="card-text">Quantity</p>
+        </div>
+    </div>
+    <div class="col-sm-6">
+        <div class="card leftCard">
+            <p id="card-text">{{ product[0]['ProductId'] }}</p>
+            <p id="card-text">{{ product[0]['Category'] }}</p>
+            <p id="space">{{ product[0]['MainCategory'] }}</p>
+            <p id="space">{{ product[0]['TaxTarifCode'] }}</p>
+            <p id="space">{{ product[0]['SupplierName'] }}</p>
+            <p id="space">{{ product[0]['WeightMeasure'] }}</p>
+            <p id="space">{{ product[0]['WeightUnit'] }}</p>
+            <p id="space">{{ product[0]['Description'] }}</p>
+            <p id="space">{{ product[0]['Name'] }}</p>
+            <p id="space">{{ product[0]['ProductPicUrl'] }}</p>
+            <p id="space">{{ product[0]['Status'] }}</p>
+            <p id="space">{{ product[0]['Quantity'] }}</p>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

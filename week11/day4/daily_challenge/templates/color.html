@@ -1,0 +1,25 @@
+{% if background[0]['BgColor'] == 'blue' %}
+<style>
+    body {
+        background: blue;
+    }
+</style>
+{% elif background[0]['BgColor'] == 'red' %}
+<style>
+    body {
+        background: red;
+    }
+</style>
+{% elif background[0]['BgColor'] == 'green' %}
+<style>
+    body {
+        background: green;
+    }
+</style>
+{% elif background[0]['BgColor'] == 'yellow' %}
+<style>
+    body {
+        background: yellow;
+    }
+</style>
+{% endif %}

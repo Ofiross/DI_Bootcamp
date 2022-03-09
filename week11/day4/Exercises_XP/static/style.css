@@ -1,0 +1,43 @@
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+#centerSlogan {
+        height: 250px;
+        background-color: rgb(182, 182, 182);
+}
+
+#welcome-slogan {
+    margin-left: 10px;
+}
+
+h1{
+    color: blue;
+}
+
+#about {
+    margin-left: 10px;
+}
+
+#about-info {
+    display: flex;
+    justify-content: space-around;
+}
+
+.rightCard {
+    width: 20vw;
+    border: none;
+    margin-left: 20px;
+}
+
+.leftCard {
+    width: 200vw;
+    margin-left: -500px;
+    border: none;
+}
+
+p {
+  margin:0;
+  padding:0;
+}

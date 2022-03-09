@@ -1,0 +1,33 @@
+<!-- extendind the index template -->
+{% extends "index.html" %}
+<!-- changing page title to each page -->
+{% block title %}All Products{% endblock %}
+<!-- copying information from index template
+ -->
+{% block head %}
+{{super()}}
+{% endblock %}
+{% block navbar %}
+{{super()}}
+{% endblock %}
+{% block welcome %}
+{{super()}}
+{% endblock %}
+{% block content %}
+<div class="products">
+    {% for product in products %}
+    <div class="card">
+        {% if product['Status'] == "Available" %}
+        <div class="card-header">
+            {{ product['Name'] }}
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">{{ product['ProductId'] }}</h5>
+            <p class="card-text">{{ product['Description'] }}</p>
+            <a href="/products/{{product['ProductId']}}" class="btn btn-primary">More Details</a>
+        </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+</div>
+{% endblock %}
