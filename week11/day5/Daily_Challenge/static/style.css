@@ -2,6 +2,21 @@ body {
     font-family: 'Bangers', cursive;
 }
 
+#pokemon {
+    font-size: 3.5rem;
+    color: yellow;
+    text-shadow: 2px 0 0 rgb(11, 15, 206), -2px 0 0 rgb(11, 15, 206), 0 2px 0 rgb(11, 15, 206), 0 -2px 0 rgb(11, 15, 206), 1px 1px rgb(11, 15, 206), -1px -1px 0 rgb(11, 15, 206), 1px -1px 0 rgb(11, 15, 206), -1px 1px 0 rgb(11, 15, 206);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    color: rgb(248, 1, 1);
+}
+
 .card-header {
     font-size: 35px;
 }

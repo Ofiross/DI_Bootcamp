@@ -6,7 +6,7 @@ import json
 
 app = Flask(__name__)
 products_data = products_data.retrieve_all_products()
-cart_items = []
+cart_items = cart_data.cart_items()
 
 
 @app.route('/')
@@ -38,17 +38,22 @@ def cart():
 def add_product(product_id):
     product_to_add = [
         dictionary for dictionary in products_data if dictionary["ProductId"] == product_id]
-    cart_items.append(product_to_add)
+    with open('files/cart.json', "w") as file:
+        json.dump(product_to_add, file)
     return redirect(url_for('products'))
 
 
 @app.route('/delete_product_from_cart/<product_id>')
 def delete_product(product_id):
-    with open('files/cart.json', 'w') as products:
-        delete_product = json.load(products)
-        product_to_add = [
-            dictionary for dictionary in products_data if dictionary["ProductId"] == product_id]
-        return delete_product.remove(product_to_add)
+    product_to_delete = [
+        dictionary for dictionary in products_data if dictionary["ProductId"] == product_id]
+    with open('files/cart.json', 'r') as products:
+        cart = json.load(products)
+    for product in cart:
+        product.pop(product_to_delete)
+    with open('files/cart.json', 'w') as data_file:
+        data = json.dump(cart, data_file)
+    return redirect()
 
 
 if __name__ == "__main__":

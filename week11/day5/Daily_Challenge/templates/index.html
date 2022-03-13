@@ -20,8 +20,33 @@
 </head>
 
 <body>
+    {% block navbar %}
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{{ url_for('pokemon_types')}}">Pokemons</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{{ url_for('pokemon_types')}}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('all_pokemons')}}">All Pokemons</a>
+                    </li>
+                </ul>
+            </div>
+            <form class="d-flex " action="{{url_for('pokemon_by_name')}}" method="post">
+                <input class="form-control me-2" type="text" name="search_bar" placeholder="Search Pokemon"
+                    aria-label="Search">
+                <button class="btn btn-outline-success" type="submit" value="Search">Search</button>
+            </form>
+    </nav>
+    {% endblock %}
     {% block body %}
-    <H1>The great Pokemon Encyclopedia</H1>
+    <H1>The <span id="pokemon">Pokemon</span> Encyclopedia</H1>
     <div class="card">
         <h3>Pokemon By Types</h3>
         <ul class="list-group">
@@ -30,6 +55,11 @@
                     href="{{url_for('pokemon_by_type', type=pokemon['name'])}}">{{pokemon['name']}}</a></li>
         </ul>
         {% endfor %}
+        {% endblock %}
+        {% block footer %}
+        <footer>
+            <p>&#169 Ofiross 2022</p>
+        </footer>
         {% endblock %}
 </body>
 

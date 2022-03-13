@@ -6,17 +6,17 @@
 {% block body %}
 
 <body>
-    {% block body %}
     <H1>The great Pokemon Encyclopedia</H1>
     <div class="card">
         <h3>Pokemon By Types</h3>
         <ul class="list-group">
-            {% for pokemon in pokemons %}
+            {% for pokemon in all_pokemons %}
             <li class="list-group-item"><a
                     href="{{url_for('pokemon_by_type', type=pokemon['name'])}}">{{pokemon['name']}}</a></li>
+            {% endfor %}
         </ul>
-        {% endfor %}
-        {% endblock %}
+
 </body>
+{% endblock %}
 
 </html>

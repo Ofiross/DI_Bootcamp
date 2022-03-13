@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for, redirect, flash
+from flask import Flask, render_template, url_for, redirect, request
 import requests
 import json
 
@@ -36,7 +36,6 @@ def pokemon(id):
 
 @app.route('/pokemons/bytype/<type>')
 def pokemon_by_type(type):
-    img = []
     url = f"https://pokeapi.co/api/v2/type/{type}"
     try:
         uResponse = requests.get(url)
@@ -49,17 +48,16 @@ def pokemon_by_type(type):
     return render_template('type.html', pokemons=pokemon_names, type=group_type)
 
 
+@app.route('/pokemons/byname', methods=['POST', 'GET'])
 @app.route('/pokemons/byname/<name>')
-def pokemon_by_name(name):
-    url = f"https://pokeapi.co/api/v2/pokemon/{name}"
+def pokemon_by_name(name=''):
+    if request.method == 'POST':
+        name = request.form.get('search_bar').lower()
     try:
-        uResponse = requests.get(url)
+        requests.get(f"https://pokeapi.co/api/v2/pokemon/{name}")
+        return redirect(url_for('pokemon', id=name))
     except requests.ConnectionError:
         return redirect(url_for('all_pokemons'))
-    Jresponse = uResponse.text
-    data = json.loads(Jresponse)
-    pokemon_names = data['pokemon']
-    return render_template('type.html', pokemons=pokemon_names)
 
 
 @app.route('/pokemons/all')
