@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+{% block title %}{{ pokemons }}{% endblock %}
+{% block head %}
+{{ super() }}
+{% endblock %}
+{% block body %}
+<h1>{{ type }} pokemons:</h1>
+<div class="card">
+    {% for pokemon in pokemons %}
+    <a href="{{url_for('pokemon', id=pokemon['pokemon']['name'])}}">
+        <h5 class="card-header">{{ pokemon['pokemon']['name'] }}</h5>
+    </a>
+    <div class="card-body">
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

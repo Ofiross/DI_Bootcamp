@@ -1,0 +1,21 @@
+{% extends "index.html" %}
+{% block head %}
+{{ super() }}
+{% endblock %}
+{% block body %}
+
+<body>
+    <div class="card text-center">
+        <div class="card-header">
+            {{ pokemon['name']}}
+        </div>
+        <div class="card-body">
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{ id }}.png"
+                class="rounded mx-auto d-block" alt="pokemon">
+        </div>
+        <div class="card-footer text-muted">
+            <p>This pokemon is a <span id="pokemonAbility">{{ type }}</span> pokemon</p>
+        </div>
+    </div>
+</body>
+{% endblock %}

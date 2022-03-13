@@ -1,0 +1,15 @@
+body {
+    font-family: 'Bangers', cursive;
+}
+
+.card-header {
+    font-size: 35px;
+}
+
+.card-footer {
+    font-size: 25px;
+}
+
+#pokemonAbility {
+    font-weight: bolder;
+}
