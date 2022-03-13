@@ -48,7 +48,7 @@ def pokemon_by_type(type):
     return render_template('type.html', pokemons=pokemon_names, type=group_type)
 
 
-@app.route('/pokemons/byname', methods=['POST', 'GET'])
+@app.route('/pokemons/byname', methods=['POST'])
 @app.route('/pokemons/byname/<name>')
 def pokemon_by_name(name=''):
     if request.method == 'POST':
