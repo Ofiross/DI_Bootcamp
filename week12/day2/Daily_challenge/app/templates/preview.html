@@ -1,0 +1,289 @@
+{% extends "base.html" %}
+{% block title %}CV Creator{% endblock %}
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='classic_template.css') }}">
+{% endblock %}
+{% block head %}
+{{ super() }}
+{% endblock %}
+{% block content %}
+
+<body>
+    <div class="wrapper mt-lg-5">
+        <div class="sidebar-wrapper">
+            <div class="profile-container">
+                <img class="profile" src="assets/images/profile.png" alt="" />
+                <h1 class="name">{{ info['firstName'].capitalize() }}</h1>
+                <h3 class="tagline">{{ info['description'].capitalize() }}</h3>
+            </div>
+            <!--//profile-container-->
+
+            <div class="contact-container container-block">
+                <ul class="list-unstyled contact-list">
+                    <li class="email"><i class="fas fa-envelope"></i><a
+                            href="mailto: yourname@email.com">{{ info['email'] }}</a></li>
+                    <li class="phone"><i class="fas fa-phone"></i><a href="{{ info['phone'] }}">{{ info['phone'] }}</a>
+                    </li>
+                </ul>
+            </div>
+            <!--//contact-container-->
+            <div class="education-container container-block">
+                <h2 class="container-block-title">Education</h2>
+                {% if ['institute_name']|length > 1 %}
+                <div class="item">
+                    <h4 class="degree">{{ info['education'].capitalize() }}</h4>
+                    <h5 class="degree">{{ info['institute_name'].capitalize() }}</h5>
+                    <div class="time">{{ info['education_start'] }} - {{ info['education_end'] }}</div>
+                    <p>
+                        {{ info['education_info'] }}
+                    </p>
+                </div>
+                {% endif %}
+                <!--//item-->
+                {% if info['institute2_name']|length > 1 %}
+                <div class="item">
+                    <h4 class="degree">{{ info['education2'].capitalize() }}</h4>
+                    <h5 class="degree">{{ info['institute2_name'].capitalize() }}</h5>
+                    <div class="time">{{ info['education2_start'] }} - {{ info['education2_end'] }}</div>
+                    <p>
+                        {{ inf['education2_info'].capitalize() }}
+                    </p>
+                </div>
+                {% endif %}
+                <!--//item-->
+                {% if ['institute3_name']|length > 1 %}
+                <div class="item">
+                    <h4 class="degree">{{ inf['education3'].capitalize() }}</h4>
+                    <h5 class="degree">{{ inf['institute3_name'].capitalize() }}</h5>
+                    <div class="time">{{ inf['education3_start'] }} - {{ info['education3_end'] }}</div>
+                    <p>
+                        {{ info['education3_info'].capitalize() }}
+                    </p>
+                </div>
+                {% endif %}
+            </div>
+            <!--//education-container-->
+
+            <div class="languages-container container-block">
+                <h2 class="container-block-title">Languages</h2>
+                <ul class="list-unstyled interests-list">
+                    <li>{{ info['language'].capitalize() }} <span
+                            class="lang-desc">{{ info['language_level'].capitalize() }}</span></li>
+                    {% if info['language2']|length > 1 %}
+                    <li>{{ info['language2'].capitalize() }} <span
+                            class="lang-desc">{{ info['language2_level'].capitalize() }}</span></li>
+                    {% endif %}
+                    {% if info['language2']|length > 1 %}
+                    <li>{{ info['language3'].capitalize() }} <span
+                            class="lang-desc">{{ info['language3_level'].capitalize() }}</span></li>
+                    {% endif %}
+                    {% if info['language2']|length > 1 %}
+                    <li>{{ info['language4'].capitalize() }} <span
+                            class="lang-desc">{{ info['language4_level'].capitalize() }}</span></li>
+                    {% endif %}
+                </ul>
+            </div>
+            <!--//interests-->
+
+            <div class="interests-container container-block">
+                <h2 class="container-block-title">Interests</h2>
+                <ul class="list-unstyled interests-list">
+                    {% if info['hobbies']|length > 1 %}
+                    <li>{{ info['hobbies'].capitalize() }}</li>
+                    {% endif %}
+                    {% if info['hobbies2']|length > 1 %}
+                    <li>{{ info['hobbies2'].capitalize() }}</li>
+                    {% endif %}
+                    {% if info['hobbies3']|length > 1 %}
+                    <li>{{ info['hobbies3'].capitalize() }}</li>
+                    {% endif %}
+                    {% if info['hobbies4']|length > 1 %}
+                    <li>{{ info['hobbies4'].capitalize() }}</li>
+                    {% endif %}
+                    {% if info['hobbies5']|length > 1 %}
+                    <li>{{ info['hobbies5'].capitalize() }}</li>
+                    {% endif %}
+                </ul>
+            </div>
+            <!--//interests-->
+
+        </div>
+        <!--//sidebar-wrapper-->
+
+        <div class="main-wrapper">
+
+            <section class="section summary-section">
+                <h2 class="section-title"><span class="icon-holder"><i class="fas fa-user"></i></span>Career Profile
+                </h2>
+                <div class="summary">
+                    <p>
+                        {{ info['career_sum'].capitalize() }}
+                    </p>
+                </div>
+                <!--//summary-->
+            </section>
+            <!--work expirience-->
+
+            <section class="section experiences-section">
+                <h2 class="section-title"><span class="icon-holder"><i class="fas fa-briefcase"></i></span>Experiences
+                </h2>
+                <div class="item">
+                    <div class="meta">
+                        <div class="upper-row">
+                            <h3 class="job-title">{{ info['work_title'].capitalize() }}</h3>
+                            {% if info['work_end']|length > 3  %}
+                            {% set present = info['work_end'] %}
+                            {% else %}
+                            {% set present = 'present' %}
+                            {% endif %}
+                            <div class="time">{{ info['work_start'] }} - {{ present }}</div>
+                        </div>
+                        <!--//upper-row-->
+                        <div class="company">{{ info['work'] }}</div>
+                    </div>
+                    <!--//meta-->
+                    <div class="details">
+                        <p>
+                            {{ info['work_info'] }}
+                        </p>
+                    </div>
+                    <!--//details-->
+                </div>
+                <!--//item-->
+                {% if info['work2']|length > 1 %}
+                <div class="item">
+                    <div class="meta">
+                        <div class="upper-row">
+                            <h3 class="job-title">{{ info['work2_title'].capitalize() }}</h3>
+                            <div class="time">{{ info['work2_start'] }} - {{ info['work2_end'] }}</div>
+                        </div>
+                        <!--//upper-row-->
+                        <div class="company">{{ info['work2'] }}</div>
+                    </div>
+                    <!--//meta-->
+                    <div class="details">
+                        <p>
+                            {{ info['work2_info'] }}
+                        </p>
+                    </div>
+                    <!--//details-->
+                </div>
+                {% endif %}
+                <!--//item-->
+                {% if info['work3']|length > 1 %}
+                <div class="item">
+                    <div class="meta">
+                        <div class="upper-row">
+                            <h3 class="job-title">{{ info['work3_title'].capitalize() }}</h3>
+                            <div class="time">{{ info['work3_start'] }} - {{ info['work3_end'] }}</div>
+                        </div>
+                        <!--//upper-row-->
+                        <div class="company">{{ info['work3'] }}</div>
+                    </div>
+                    <!--//meta-->
+                    <div class="details">
+                        <p>
+                            {{ info['work3_info'] }}
+                        </p>
+                    </div>
+                    <!--//details-->
+                </div>
+                {% endif %}
+            </section>
+            <!--Projects-->
+
+            <section class="section projects-section">
+                <h2 class="section-title"><span class="icon-holder"><i class="fas fa-archive"></i></span>Projects</h2>
+                <div class="item">
+                    <span class="project-title"></span> {{ info['project'] }} <span class="project-tagline">
+                        {{ info['project_info'] }} </span>
+                </div>
+                <!--//item-->
+                <div class="item">
+                    <span class="project-title"></span> {{ info['project2'] }} <span class="project-tagline">
+                        {{ info['project2_info'] }} </span>
+                </div>
+                <!--//item-->
+                <div class="item">
+                    <span class="project-title"></span> {{ info['project3'] }} <span class="project-tagline">
+                        {{ info['project3_info'] }} </span>
+                </div>
+                <!--//item-->
+                <div class="item">
+                    <span class="project-title"></span> {{ info['project4'] }} <span class="project-tagline">
+                        {{ info['project4_info'] }} </span>
+                </div>
+                <!--//item-->
+            </section>
+            <!--//Skills-->
+
+            <section class="skills-section section">
+                <h2 class="section-title"><span class="icon-holder"><i class="fas fa-rocket"></i></span>Skills &amp;
+                    Proficiency</h2>
+                <div class="skillset">
+                    <div class="item">
+                        <h3 class="level-title">{{ info['skill'] }}</h3>
+                        <div class="progress level-bar">
+                            <div class="progress-bar theme-progress-bar" role="progressbar"
+                                style="width: {{ info['skill_level'] }}%" aria-valuenow="99" aria-valuemin="0"
+                                aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <!--//item-->
+
+                    <div class="item">
+                        <h3 class="level-title">{{ info['skill2'] }}</h3>
+                        <div class="progress level-bar">
+                            <div class="progress-bar theme-progress-bar" role="progressbar"
+                                style="width: {{ info['skill2_level'] }}%" aria-valuenow="99" aria-valuemin="0"
+                                aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <!--//item-->
+
+                    <div class="item">
+                        <h3 class="level-title">{{ info['skill3'] }}</h3>
+                        <div class="progress level-bar">
+                            <div class="progress-bar theme-progress-bar" role="progressbar"
+                                style="width: {{ info['skill3_level'] }}%" aria-valuenow="99" aria-valuemin="0"
+                                aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <!--//item-->
+
+                    <div class="item">
+                        <h3 class="level-title">{{ info['skill4'] }}</h3>
+                        <div class="progress level-bar">
+                            <div class="progress-bar theme-progress-bar" role="progressbar"
+                                style="width: {{ info['skill4_level'] }}%" aria-valuenow="99" aria-valuemin="0"
+                                aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                    <!--//item-->
+
+                    <div class="item">
+                        <h3 class="level-title">{{ info['skill5'] }}</h3>
+                        <div class="progress level-bar">
+                            <div class="progress-bar theme-progress-bar" role="progressbar"
+                                style="width: {{ info['skill5_level'] }}%" aria-valuenow="99" aria-valuemin="0"
+                                aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--//skills-section-->
+
+        </div>
+        <!--//main-body-->
+    </div>
+
+    <footer class="footer">
+        <div class="text-center">
+            <small class="copyright">&#169 Designed<i class="fas fa-heart"></i> by <a href="https://ofirruss.com/"
+                    target="_blank">Ofir Russ </a>2022</small>
+        </div>
+        <!--//container-->
+    </footer>
+    <!--//footer-->
+</body>
+{% endblock %}

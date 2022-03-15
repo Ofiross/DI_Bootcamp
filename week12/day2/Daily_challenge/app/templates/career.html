@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% block title %}CV Personal Info{% endblock %}
+{% block head %}
+{{ super() }}
+{% endblock %}
+
+{% block content %}
+<div class="cv-creator">
+    <form class="personal-info" method="POST" action="{{ url_for('careerInfo') }}">
+        {{ form.hidden_tag() }}
+        <!-- 1st Career -->
+        <H4>Career</H4>
+        <h6>Summarise your career here</h6>
+        <div class="mb-3">
+            {{ form.career_sum(class="form-control", placeholder="Career summarise", rows="3") }}
+        </div>
+        <H6>Last\Current Job</H6>
+        <div class="mb-3">
+            {{ form.work(class="form-control", placeholder="Company") }}
+        </div>
+        <div class="mb-3">
+            {{ form.work_title(class="form-control", placeholder="Job Title") }}
+        </div>
+        <div class="row">
+            <div class="mb-3">
+                {{ form.work_start(class="form-control", placeholder="Year Start") }}
+            </div>
+            <div class="mb-3">
+                {{ form.work_end(class="form-control", placeholder="Year End") }}
+            </div>
+        </div>
+        <div class="mb-3">
+            {{ form.work_info(class="form-control", placeholder="Info", rows="3") }}
+        </div>
+        <!-- 2nd Career -->
+        <H6>Optional</H6>
+        <div class="mb-3">
+            {{ form.work2(class="form-control", placeholder="Company") }}
+        </div>
+        <div class="mb-3">
+            {{ form.work2_title(class="form-control", placeholder="Job Title") }}
+        </div>
+        <div class="row">
+            <div class="mb-3">
+                {{ form.work2_start(class="form-control", placeholder="Year Start") }}
+            </div>
+            <div class="mb-3">
+                {{ form.work2_end(class="form-control", placeholder="Year End") }}
+            </div>
+        </div>
+        <div class="mb-3">
+            {{ form.work2_info(class="form-control", placeholder="Info", rows="3") }}
+        </div>
+        <!-- 3rd Career -->
+        <H6>Optional</H6>
+        <div class="mb-3">
+            {{ form.work3(class="form-control", placeholder="Company") }}
+        </div>
+        <div class="mb-3">
+            {{ form.work3_title(class="form-control", placeholder="Job Title") }}
+        </div>
+        <div class="row">
+            <div class="mb-3">
+                {{ form.work3_start(class="form-control", placeholder="Year Start") }}
+            </div>
+            <div class="mb-3">
+                {{ form.work3_end(class="form-control", placeholder="Year End") }}
+            </div>
+        </div>
+        <div class="mb-3">
+            {{ form.work3_info(class="form-control", placeholder="Info", rows="3") }}
+        </div>
+        <div class="col-12">
+            {{ form.submit(class="btn btn-primary") }}
+        </div>
+    </form>
+</div>
+{% endblock %}

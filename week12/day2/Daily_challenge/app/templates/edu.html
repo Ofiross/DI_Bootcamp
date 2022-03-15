@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+{% block title %}CV Personal Info{% endblock %}
+{% block head %}
+{{ super() }}
+{% endblock %}
+
+{% block content %}
+<H4>Education</H4>
+<div class="cv-creator">
+    <form class="personal-info" method="POST" action="{{ url_for('educationInfo') }}">
+        {{ form.hidden_tag() }}
+        <div class="row">
+            <h6>Language</h6>
+            <div class="col">
+                {{ form.language(class="form-control", placeholder="Language") }}
+            </div>
+            <div class="col">
+                {{ form.language2(class="form-control", placeholder="optional Language") }}
+            </div>
+            <div class="col">
+                {{ form.language3(class="form-control", placeholder="optional Language") }}
+            </div>
+            <div class="col">
+                {{ form.language4(class="form-control", placeholder="optional Language") }}
+            </div>
+        </div>
+        <div class="row">
+            <h6>Language Level Lowest-1 highest-5</h6>
+            <div class="col">
+                {{ form.language_level(class="form-control", placeholder="Level 1-5") }}
+            </div>
+            <div class="col">
+                {{ form.language2_level(class="form-control", placeholder="Level 1-5") }}
+            </div>
+            <div class="col">
+                {{ form.language3_level(class="form-control", placeholder="Level 1-5") }}
+            </div>
+            <div class="col">
+                {{ form.language4_level(class="form-control", placeholder="Level 1-5") }}
+            </div>
+        </div>
+        <!-- 1st Education -->
+        <h6>Institute</h6>
+        <div class="mb-3">
+            {{ form.institute_name(class="form-control", placeholder="Institute Name") }}
+        </div>
+        <div class="mb-3">
+            {{ form.education(class="form-control", placeholder="Field Of Studies / Degree") }}
+        </div>
+        <div class="row">
+            <div class="col">
+                {{ form.education_start(class="form-control", placeholder="Year Start") }}
+            </div>
+            <div class="col">
+                {{ form.education_end(class="form-control", placeholder="Year End") }}
+            </div>
+        </div>
+        <br>
+        <div class="mb-3">
+            {{ form.education_info(class="form-control", placeholder="Info", rows="3") }}
+        </div>
+        <!-- 2nd Education -->
+        <H6>Optional</H6>
+        <div class="mb-3">
+            {{ form.institute2_name(class="form-control", placeholder="Institute Name") }}
+        </div>
+        <div class="mb-3">
+            {{ form.education2(class="form-control", placeholder="Field Of Studies / Degree") }}
+        </div>
+        <div class="row">
+            <div class="col">
+                {{ form.education2_start(class="form-control", placeholder="Year Start") }}
+            </div>
+            <div class="col">
+                {{ form.education2_end(class="form-control", placeholder="Year End") }}
+            </div>
+        </div>
+        <br>
+        <div class="mb-3">
+            {{ form.education2_info(class="form-control", placeholder="Info", rows="3") }}
+        </div>
+        <!-- 3rd Education -->
+        <H6>Optional</H6>
+        <div class="mb-3">
+            {{ form.institute3_name(class="form-control", placeholder="Institute Name") }}
+        </div>
+        <div class="mb-3">
+            {{ form.education3(class="form-control", placeholder="Field Of Studies / Degree") }}
+        </div>
+        <div class="row">
+            <div class="col">
+                {{ form.education3_start(class="form-control", placeholder="Year Start") }}
+            </div>
+            <div class="col">
+                {{ form.education3_end(class="form-control", placeholder="Year End") }}
+            </div>
+        </div>
+        <br>
+        <div class="mb-3">
+            {{ form.education3_info(class="form-control", placeholder="Info", rows="3") }}
+        </div>
+        <div class="col-12">
+            {{ form.submit(class="btn btn-primary") }}
+        </div>
+    </form>
+</div>
+{% endblock %}

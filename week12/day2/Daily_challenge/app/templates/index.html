@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}CV Creator{% endblock %}
+{% block head %}
+{{ super() }}
+{% endblock %}
+{% block navbar %}
+{{ super() }}
+{% endblock %}
+
+
+{% block content %}
+<h1>CV Creator:</h1>
+<h3>Choose category for building your CV</h3>
+<a class="btn btn-primary category" href="{{ url_for('personal') }}" role="button">Personal Information</a>
+<a class="btn btn-primary category" href="{{ url_for('education') }}" role="button">Education</a>
+<a class="btn btn-primary category" href="{{ url_for('career') }}" role="button">Career</a>
+<a class="btn btn-primary category" href="{{ url_for('projects') }}" role="button">Projects</a>
+<a class="btn btn-primary category" href="{{ url_for('other') }}" role="button">Skills and Other</a>
+{% endblock %}

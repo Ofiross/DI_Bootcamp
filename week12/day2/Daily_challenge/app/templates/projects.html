@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block title %}CV Personal Info{% endblock %}
+{% block head %}
+{{ super() }}
+{% endblock %}
+
+{% block content %}
+<div class="cv-creator">
+    <form class="personal-info" method="POST" action="{{ url_for('projectsInfo') }}">
+        {{ form.hidden_tag() }}
+        <!-- 1st Career -->
+        <H4>Projects</H4>
+        <div class="mb-3">
+            {{ form.project(class="form-control", placeholder="Project Name") }}
+        </div>
+        <div class="mb-3">
+            {{ form.project_info(class="form-control", placeholder="Description", rows="3") }}
+        </div>
+        <div class="mb-3">
+            {{ form.project2(class="form-control", placeholder="Project Name") }}
+        </div>
+        <div class="mb-3">
+            {{ form.project2_info(class="form-control", placeholder="Description", rows="3") }}
+        </div>
+        <div class="mb-3">
+            {{ form.project3(class="form-control", placeholder="Project Name") }}
+        </div>
+        <div class="mb-3">
+            {{ form.project3_info(class="form-control", placeholder="Description", rows="3") }}
+        </div>
+        <div class="mb-3">
+            {{ form.project4(class="form-control", placeholder="Project Name") }}
+        </div>
+        <div class="mb-3">
+            {{ form.project4_info(class="form-control", placeholder="Description", rows="3") }}
+        </div>
+        <br>
+        <div class="col-12">
+            {{ form.submit(class="btn btn-primary") }}
+        </div>
+    </form>
+</div>
+{% endblock %}

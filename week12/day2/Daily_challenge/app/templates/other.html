@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% block title %}CV Personal Info{% endblock %}
+{% block head %}
+{{ super() }}
+{% endblock %}
+
+{% block content %}
+<H4>Skills and Other</H4>
+<div class="cv-creator">
+    <form class="personal-info" method="POST" action="{{ url_for('otherInfo') }}">
+        {{ form.hidden_tag() }}
+        <div class="mb-3">
+            {{ form.skill(class="form-control", placeholder="Skills 1") }}
+        </div>
+        <div class="mb-3">
+            {{ form.skill_level(type="range", class="form-range", class="level") }}
+        </div>
+        <div class="mb-3">
+            {{ form.skill2(class="form-control", placeholder="Skill 2") }}
+        </div>
+        <div class="mb-3">
+            {{ form.skill2_level(type="range", class="form-range", class="level") }}
+        </div>
+        <div class="mb-3">
+            {{ form.skill3(class="form-control", placeholder="Skill 3") }}
+        </div>
+        <div class="mb-3">
+            {{ form.skill3_level(type="range", class="form-range", class="level") }}
+        </div>
+        <div class="mb-3">
+            {{ form.skill4(class="form-control", placeholder="Skill 4") }}
+        </div>
+        <div class="mb-3">
+            {{ form.skill4_level(type="range", class="form-range", class="level") }}
+        </div>
+        <div class="mb-3">
+            {{ form.skill5(class="form-control", placeholder="Skill 5") }}
+        </div>
+        <div class="mb-3">
+            {{ form.skill5_level(type="range", class="form-range", class="level") }}
+        </div>
+        <div class="row">
+            <div class="mb-3">
+                {{ form.hobbies(class="form-control", placeholder="Hobbie 1") }}
+            </div>
+            <div class="mb-3">
+                {{ form.hobbies2(class="form-control", placeholder="Hobbie 2") }}
+            </div>
+            <div class="mb-3">
+                {{ form.hobbies3(class="form-control", placeholder="Hobbie 3") }}
+            </div>
+            <div class="mb-3">
+                {{ form.hobbies4(class="form-control", placeholder="Hobbie 4") }}
+            </div>
+            <div class="mb-3">
+                {{ form.hobbies5(class="form-control", placeholder="Hobbie 5") }}
+            </div>
+            <div class="mb-3">
+                {{ form.other(class="form-control", placeholder="Optional info to add", rows="3") }}
+            </div>
+        </div>
+        <div class="col-12">
+            {{ form.submit(class="btn btn-primary") }}
+        </div>
+    </form>
+</div>
+{% endblock %}
