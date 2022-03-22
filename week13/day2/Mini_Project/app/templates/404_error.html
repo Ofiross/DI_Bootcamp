@@ -1,0 +1,8 @@
+{% extends "index.html" %}
+
+<body>
+    {% block content %}
+    <h1>Page not found...</h1>
+    <a href="{{url_for('index')}}">Click here to go back to the Homepage</a>
+    {% endblock %}
+</body>

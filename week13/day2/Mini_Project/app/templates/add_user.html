@@ -1,0 +1,28 @@
+{% extends "index.html" %}
+
+<body>
+    {% block content %}
+    <form class="add-person" method="POST">
+        {{ form.hidden_tag() }}
+        <div class="row">
+            <h2>Add New Person</h2>
+            <div class="col">
+                {{ form.name(class="form-control", id="name", placeholder="Name") }}
+            </div>
+            <div class="col">
+                {{ form.street(class="form-control", id="street", placeholder="Street") }}
+            </div>
+            <div class="col">
+                {{ form.city(class="form-control", id="city", placeholder="City") }}
+            </div>
+            <div class="col">
+                {{ form.zipcode(class="form-control", id="zipcode", placeholder="Zipcode") }}
+            </div>
+        </div>
+        <br>
+        <div class="col-12">
+            {{ form.submit(class="btn btn-primary") }}
+        </div>
+    </form>
+    {% endblock %}
+</body>
