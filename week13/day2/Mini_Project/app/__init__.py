@@ -11,7 +11,7 @@ app.config.from_object(Config)
 
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
-db.create_all()
+
 
 from app.models import User
 def populate():
@@ -26,4 +26,5 @@ def populate():
             db.session.commit()
 """ populate() """
 
-from app import routes, error_handlers
+from app import routes, error_handlers, models
+db.create_all()

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+<body>
+    {% block content %}
+    <h1>Information about owner of phone number {{ number }}</h1>
+    <table class="table table-dark">
+        <thead>
+            <tr>
+                <th scope="col">Person Full Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone number1</th>
+                <th scope="col">Phone number2</th>
+                <th scope="col">Address</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ person_info.name }}</td>
+                <td>{{ person_info.email }}</td>
+                {% for numbers in person_info.phonenumbers %}
+                <td>{{ numbers.number }}</td>
+                {% endfor %}
+                <td>{{ person_info.address }}</td>
+            </tr>
+        </tbody>
+    </table>
+    {% endblock %}
+</body>
